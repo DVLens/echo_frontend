@@ -1,0 +1,37 @@
+button {    
+    min-width: fit-content;
+    min-height: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    vertical-align: auto;   
+    border-radius: 8px;        
+    border-width: 1px; 
+    padding: 4px;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: 0.8;          
+    }
+    
+    &.success {
+        background-color:#64d125;
+        border-color: #419212;          
+    }
+
+    &.warning {
+        background-color: #f59e3a;
+        border-color: #b46000;
+    }
+
+    &.danger {
+        background-color: #f53a3a;
+        border-color: #bd0f0f;
+    }
+
+    &.primary {
+        background-color: #dddddd;
+        border-color: #919191;
+    }
+}
+

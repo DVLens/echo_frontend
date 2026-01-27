@@ -1,3 +1,6 @@
-<button>
-    {{content()}}
+<button type="button" [class]="type()">
+    @if(icon()){
+        <fa-icon [icon]="icon()"></fa-icon>
+    }    
+    <span class="button-text">{{content()}}</span>
 </button>

@@ -8,7 +8,8 @@ const paths: Routes = [
 ];
 
 if(!environment.production){
-    paths.push({path:'test-components', component: TestPage})
+    paths.push(
+        { path:'test-components', component: TestPage})
 }
 
 export const routes: Routes = paths

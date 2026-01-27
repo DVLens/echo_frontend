@@ -3,7 +3,7 @@ import { GeneralTable } from "../shared/components/general-table/general-table";
 import { COLUMN_DEFINITIONS } from '../shared/components/general-table.example.definition';
 import { IUser } from '../shared/components/general-table/general-table.interface';
 import { GenericButtonComponent } from "../shared/components/generic-button-component/generic-button-component";
-
+import { faXmark,faCheck, faExclamation  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-test-page',
@@ -16,6 +16,8 @@ export class TestPage {
   tableData:IUser[]=[
     {name:'Kafka', email: 'chinkunguya@gmail.com', role: 'papu', status: 'active'},
     {name:'Temu', email: 'chinkunguya@gmail.com', role: 'papu', status: 'active'}
-  ];
-  content = "test";
+  ];  
+  icons = [
+    faXmark, faCheck, faExclamation
+  ]
 }

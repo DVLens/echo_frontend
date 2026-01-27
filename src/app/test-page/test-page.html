@@ -1,6 +1,16 @@
-<div>
-    <app-general-table [columns]="columns" [tableData]="tableData"></app-general-table>
-    <app-generic-button-component [content]="content"/>
+<div>    
+    <div class="container">
+        <app-generic-button-component content="primary"/>
+        <app-generic-button-component content="success" type="success" [icon]="icons.at(0)"/>
+        <app-generic-button-component content="warning" type="warning" [icon]="icons.at(1)"/>
+        <app-generic-button-component content="danger" type="danger" [icon]="icons.at(2)"/>        
+    </div>
+    <div class="container">
+        <app-generic-button-component/>
+        <app-generic-button-component type="success" [icon]="icons.at(0)"/>
+        <app-generic-button-component type="warning" [icon]="icons.at(1)"/>
+        <app-generic-button-component type="danger" [icon]="icons.at(2)"/>        
+    </div>
 </div>
 <p>test-page works!</p>
 
