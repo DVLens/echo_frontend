@@ -1,3 +1,21 @@
 .side-bar {
     position: static;
+    flex-wrap: wrap;
+    display: block;    
+    &.hide{
+        display: none;
+    }    
+}
+
+.icon {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer; /* Makes it clear the text is clickable */
+  outline: none; /* Removes the blue/focus outline when clicked/focused in some browsers */
+  /* Add your desired text styles here, e.g., color, font-size, text-decoration */  
+  text-decoration: underline; /* Example: default link underline */
+  font-size: 1rem; /* Example: set a desired font size */
+  
 }

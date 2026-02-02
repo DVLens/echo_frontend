@@ -10,4 +10,20 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class SideBarComponent {
   barsIcon = faBars;
+  style: string = "side-bar"
+  show: boolean = true;
+
+  toggleBar(){
+    if(this.show){
+      this.show = false;
+      this.style = "side-bar hide"
+    }
+    else{
+      this.show = true;    
+      this.style = "side-bar"
+    }
+      
+  }
+
+
 }
