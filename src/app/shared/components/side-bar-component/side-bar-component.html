@@ -1,7 +1,15 @@
-<div [class]="style">
-    <button class="icon" (click)="toggleBar()">
-        <fa-icon [icon]="barsIcon"/>
-    </button>
-    <div>        
+<!-- Button to show and hide the side bar-->
+<div class="side-bar" [class.hide]="!show">
+    <div class="icon-button">
+        <button class="icon" (click)="toggleBar()">
+            <fa-icon [icon]="barsIcon"/>
+        </button>
+    </div>
+    <div class="option-list">        
+            @for (route of routes(); track $index) {
+                <div>
+                    <span>{{route}}</span>    
+                </div>                
+            }            
     </div>
 </div>

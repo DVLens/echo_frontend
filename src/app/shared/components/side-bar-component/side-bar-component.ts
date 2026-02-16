@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { FaIconComponent } from "@fortawesome/angular-fontawesome";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,19 +10,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class SideBarComponent {
   barsIcon = faBars;
-  style: string = "side-bar"
   show: boolean = true;
+  routes = input<string[]>();
 
   toggleBar(){
-    if(this.show){
-      this.show = false;
-      this.style = "side-bar hide"
-    }
-    else{
-      this.show = true;    
-      this.style = "side-bar"
-    }
-      
+    this.show = !this.show;
   }
 
 
