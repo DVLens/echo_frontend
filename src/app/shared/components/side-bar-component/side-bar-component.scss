@@ -1,4 +1,7 @@
+@use 'styles' as s;
+
 .side-bar {
+    display: flex;
     &.hide {
         .option-list {
             display: none;
@@ -7,18 +10,39 @@
 }
 
 .option-list {
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: s.$primary-color;
+    padding-top: 10px;
     height: 100vh;
     width: 200px;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #ddd;    
 }
 
-.icon-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+.option {
+    max-width: 100%;
+    
+    border-bottom:1px solid rgb(#911818, 0.4);    
+    background-color: #b8b8b8;
+    padding: 2px;
+    &:hover{
+        background-color: rgb(243, 243, 243);
+    }
+}
+
+.option.is-active-option {
+    background-color: #000000;
+    a {
+        color: white;
+    }
+}
+
+a {    
+    text-decoration: none;    
+    width: 100%;    
+    text-align: left;
+    color: rgb(37, 37, 37);
+    &:hover{
+        background-color: rgb(243, 243, 243);
+    }
 }
 
 .icon {
@@ -26,9 +50,10 @@
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
-    padding: 10px;
-    background-color: white;
-    border-radius: 50%;
+    padding: 8px;
+    background-color: white;    
+    border-end-end-radius: 30%;
+    border-start-end-radius: 30%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;

@@ -4,6 +4,7 @@ import { HomePage } from './home-page/home-page';
 import { TestPage } from './test-page/test-page';
 
 const paths: Routes = [
+    {path: '', component: HomePage},
     {path: 'home', component: HomePage},    
 ];
 
